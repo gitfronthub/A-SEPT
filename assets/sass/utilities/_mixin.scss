@@ -1,0 +1,72 @@
+@mixin title ($color, $weight) {
+    font-size: 40px;
+    font-weight: $weight;
+    color: $color;
+
+    @media (max-width: 991px) {
+        font-size: 35px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 20px;
+    }
+}
+
+@mixin content($color, $weight) {
+    font-size: 24px;
+    font-weight: $weight;
+    color: $color;
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 18px;
+    }
+}
+
+@mixin text($color, $weight) {
+    font-size: 16px;
+    font-weight: $weight;
+    color: $color;
+
+    @media (max-width: 576px) {
+        font-size: 15px;
+    }
+}
+
+@mixin icon($bacColor, $color) {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bacColor;
+    border-radius: 6px;
+    transition: all 0.3s;
+    border: 2px solid $color;
+    @include text($color, 400);
+
+    &:hover {
+        background-color: $color;
+        color: $bacColor;
+    }
+}
+
+@mixin btn($bacColor, $color, $tb, $lr) {
+    background-color: $bacColor;
+    color: $color;
+    border-radius: 6px;
+    transition: all 0.3s;
+    border: 2px solid $bacColor;
+    padding: $tb $lr;
+
+    &:hover {
+        background-color: $color;
+        color: $bacColor;
+    }
+}
