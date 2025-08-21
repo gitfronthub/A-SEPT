@@ -3,6 +3,10 @@
     width: 100%;
     padding: 20px 40px;
     background-color: $green;
+    z-index: 10;
+    @media (max-width: 1199px) {
+        padding: 10px 10px;
+    }
     &__content {
         display: flex;
         justify-content: space-between;
@@ -10,12 +14,17 @@
         padding: 10px 20px;
         background-color: $gray;
         border-radius: 20px;
+        @media (max-width: 1199px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            background-color: $gray;
+            border-radius: 20px;
+        }
         &__nav {
             display: flex;
             align-items: center;
-            @media (max-width: 991px) {
-                display: none;
-            }
             &__list {
                 display: flex;
                 justify-content: space-between;
@@ -24,6 +33,23 @@
                 background-color: $white;
                 border-radius: 20px;
                 padding: 10px 20px;
+                @media (max-width: 1199px) {
+                    position: fixed;
+                    top: 100px;
+                    left: -100%;
+                    width: 70vw;
+                    height: 100vh;
+                    padding: 20px 40px;
+                    background-color: $green;
+                    display: flex;
+                    z-index: 11;
+                    flex-direction: column;
+                    transition: 0.3s;
+                    border-radius: 0;
+                }
+                &.active {
+                    left: 0;
+                }
                 &__item {
                     a {
                         color: $black;
@@ -31,6 +57,9 @@
                         font-size: 20px;
                         transition: 0.3s;
                         position: relative;
+                        @media (max-width: 1199px) {
+                            color: $white;
+                        }
                         &::after {
                             content: "";
                             position: absolute;
@@ -40,8 +69,11 @@
                             background-color: $green;
                             bottom: -5px;
                             left: 0;
+                            @media (max-width: 1199px) {
+                                background-color: $white;
+                            }
                         }
-                        &:hover{
+                        &:hover {
                             color: $green;
                             &::after {
                                 width: 100%;
@@ -60,12 +92,45 @@
             border-radius: 20px;
             padding: 10px 20px;
             color: $green;
-            @media (max-width: 991px) {
+            @media (max-width: 767px) {
                 display: none;
             }
             &__text {
                 font-weight: 600;
                 font-size: 20px;
+            }
+        }
+        &__burger {
+            display: none;
+            cursor: pointer;
+            @media (max-width: 991px) {
+                display: block;
+            }
+            span {
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: $green;
+                margin: 5px 0;
+                transition: 0.3s;
+                border-radius: 25px;
+                cursor: pointer;
+            }
+        }
+        &__opacity {
+            opacity: 0.5;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 120px;
+            left: 100;
+            background-color: $black;
+            z-index: 10;
+            display: none;
+            transition: all 0.3s ease;
+            transform: translateX(100%);
+            &.active {
+                transform: translateX(0);
             }
         }
     }
