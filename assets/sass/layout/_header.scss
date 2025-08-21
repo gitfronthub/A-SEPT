@@ -13,7 +13,7 @@
         &__nav {
             display: flex;
             align-items: center;
-            @media (max-width: 1199px) {
+            @media (max-width: 991px) {
                 display: none;
             }
             &__list {
@@ -60,7 +60,7 @@
             border-radius: 20px;
             padding: 10px 20px;
             color: $green;
-            @media (max-width: 1199px) {
+            @media (max-width: 991px) {
                 display: none;
             }
             &__text {
