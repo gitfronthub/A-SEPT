@@ -60,7 +60,7 @@
 @mixin btn($bacColor, $color, $tb, $lr) {
     background-color: $bacColor;
     color: $color;
-    border-radius: 6px;
+    border-radius: 12px;
     transition: all 0.3s;
     border: 2px solid $bacColor;
     padding: $tb $lr;

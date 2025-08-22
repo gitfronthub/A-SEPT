@@ -1,0 +1,45 @@
+.banner{
+    background-color: $green;
+    padding: 150px 0 50px;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__text{
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            background-color: $gray;
+            padding: 10px 20px;
+            gap: 10px;
+            &__link{
+                @include btn($green, $gray, 10px, 20px);
+            }
+            &__icons{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                &__item{
+                    min-width: 150px;
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    background-color: $white;
+                    width: 190px;
+                    padding: 10px 30px;
+                    gap: 10px;
+                    border-radius: 10px;
+                    &__text{
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: $green;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
