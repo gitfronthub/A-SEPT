@@ -240,6 +240,11 @@ img {
   background-color: #698468;
   padding: 150px 0 50px;
 }
+@media (max-width: 991px) {
+  .banner {
+    padding: 120px 0 20px;
+  }
+}
 .banner__content {
   display: flex;
   justify-content: space-between;

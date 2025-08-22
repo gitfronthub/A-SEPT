@@ -1,6 +1,9 @@
 .banner{
     background-color: $green;
     padding: 150px 0 50px;
+    @media (max-width: 991px) {
+        padding: 120px 0 20px;
+    }
     &__content{
         display: flex;
         justify-content: space-between;
