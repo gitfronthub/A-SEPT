@@ -308,6 +308,22 @@ img {
   padding: 0px 30px 0 20px;
   color: gray;
   font-size: 22px;
+  font-weight: 400;
+}
+@media (max-width: 991px) {
+  .banner__content__text__description {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .banner__content__text__description {
+    font-size: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .banner__content__text__description {
+    font-size: 10px;
+  }
 }
 .banner__content__text__link {
   background-color: #698468;
