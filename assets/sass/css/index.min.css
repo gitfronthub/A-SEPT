@@ -376,4 +376,9 @@ img {
   .banner__content__img img {
     width: 100%;
   }
+}
+@media (max-width: 1199px) {
+  .banner__content__img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=index.min.css.map */
