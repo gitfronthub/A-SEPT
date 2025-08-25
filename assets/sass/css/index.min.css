@@ -249,7 +249,6 @@ img {
   display: flex;
   align-items: center;
   gap: 20px;
-  flex-wrap: nowrap;
 }
 @media (max-width: 1199px) {
   .banner__content {
@@ -364,6 +363,7 @@ img {
   text-align: center;
 }
 .banner__content__img {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -381,5 +381,26 @@ img {
 @media (max-width: 1199px) {
   .banner__content__img {
     width: 100%;
+  }
+}
+.banner__content__img__video {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 130px;
+  height: 130px;
+  background-color: #698468;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  .banner__content__img__video {
+    top: 30px;
+    left: 30px;
+    width: 100px;
+    height: 100px;
   }
 }/*# sourceMappingURL=index.min.css.map */
